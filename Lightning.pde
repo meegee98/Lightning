@@ -15,7 +15,6 @@ void draw()
 {
 
 	cloud();
-	words();
 	house();
 	stroke((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
 	while(endY<500)
@@ -48,16 +47,10 @@ void cloud()
 void house()
 {
 	fill(0);
+	stroke(139, 130, 120);
 	rect(350, 300, 100, 100);
 	triangle(325, 300, 400, 250, 475, 300);
 	rect(385, 350, 25, 50);
-}
-
-String words()
-{
-	fill(0);
-	String[] cloudWords = {"Hello There", "AHH Lightning", "Welcome!", "Click Again"};
-	return cloudWords[(int)(Math.random() * cloudWords.length)];
 }
 
 void mousePressed()
@@ -67,9 +60,6 @@ void mousePressed()
 	endX=150;
 	endY=0;
 	background((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
-
 	
-
-
 }
 
